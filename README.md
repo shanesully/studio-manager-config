@@ -28,8 +28,11 @@ __mkdir studio-manager && cd studio manager__
 Run the following shell commands:
 
 __git clone https://github.com/shanesully/studio-manager-classes-api.git && cd studio-manager-classes-api__
-__git checkout feature/create-class-api__
+
+__git checkout releases/1.0__
+
 __mvn clean install__
+
 __cd ..__
 
 #### Build the Bookings API
@@ -37,8 +40,11 @@ __cd ..__
 Run the following shell commands:
 
 __git clone https://github.com/shanesully/studio-manager-bookings-api.git && cd studio-manager-bookings-api__
-__git checkout feature/create-bookings-api__
+
+__git checkout releases/1.0__
+
 __mvn clean install__
+
 __cd ..__
 
 These two microservices comprise the app
@@ -95,3 +101,11 @@ _Import -> Import From Link -> https://www.getpostman.com/collections/aee5e9583b
 * _Deleting_ a booking decrements __{{class.capacity}}__
 * When creating a _class_, __{{class.id}}__ is automatically assigned
 * When creating a _booking_, __{{booking.id}}__ is automatically assigned
+
+## Additional
+### Future Improvements
+* Implement in-memory db using __H2__ 
+* Configure __Spring Data JPA__ to manage ORM
+* Increase testing
+* Setup __Resilience4j__ for fault tolerance
+* Setup __Eureka__ for service discovery

@@ -4,6 +4,10 @@ A simple Spring Book microservices application for managing a fitness studio
 
 This guide is written for __macOS/Linux__. If you use __Windows__, I suggest you follow using __Git Bash__
 
+# Architecture
+
+![Alt text](images/studio-manager-serious-architectural-diagram.png?raw=true "Title")
+
 ## Installation
 ### Automatic
 
@@ -20,6 +24,7 @@ To install the apps manually, run the following shell commands...
 mkdir studio-manager && cd studio manager
 
 __git clone https://github.com/shanesully/studio-manager-classes-api.git__
+
 __git clone https://github.com/shanesully/studio-manager-bookings-api.git__
 
 These two microservices that compose the application

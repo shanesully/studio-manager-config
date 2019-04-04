@@ -21,26 +21,62 @@ This will clone the API's, checkout release tags, run their tests and build them
 
 To install the apps manually, run the following shell commands...
 
-mkdir studio-manager && cd studio manager
+__mkdir studio-manager && cd studio manager__
 
-__git clone https://github.com/shanesully/studio-manager-classes-api.git__
+#### Build the Classes API
 
-__git clone https://github.com/shanesully/studio-manager-bookings-api.git__
+Run the following shell commands:
 
-These two microservices that compose the application
+__git clone https://github.com/shanesully/studio-manager-classes-api.git && cd studio-manager-classes-api__
+__git checkout feature/create-class-api__
+__mvn clean install__
+__cd ..__
 
-__cd studio-manager-classes-api && mvn clean install__
-__mvn spring-boot:run__
+#### Build the Bookings API
 
-This will run tests and start the Studio Manager Classes API on _'http://localhost:8080'_
+Run the following shell commands:
 
-__cd ../studio-manager-bookings-api && mvn clean install__
-__mvn spring-boot:run__
+__git clone https://github.com/shanesully/studio-manager-bookings-api.git && cd studio-manager-bookings-api__
+__git checkout feature/create-bookings-api__
+__mvn clean install__
+__cd ..__
 
-This will run tests and start the  Studio Manager Bookings API on _'http://localhost:8090'_
+These two microservices comprise the app
 
-## Testing
-### System Testing
+### Execute Integration Tests
+
+To execute either API's tests manually, run the following command from the respective API directory:
+
+__mvn test__
+
+Each microservice is setup to be tested in isolation, with it's service dependencies fully mocked using __Mockito__
+
+### Run Microservices
+
+#### Studio Manager - Classes API
+
+To run the Classes API, change to it's respective directory and run the following command:
+
+__mvn spring-boot:run & >/dev/null__
+
+This will start the Classes API Spring Boot microservice and run it as a background process
+
+
+The __Classes API__ is configured to run on _http://localhost:8080_, which can be queried via __Postman__ (Below)
+
+#### Studio Manager - Bookings API
+
+To run the Bookings API, change to it's respective directory and run the following command:
+
+__mvn spring-boot:run & >/dev/null__
+
+This will start the Bookings API Spring Boot microservice and run it as a background process
+
+The __Bookings API__ is configured to run on _http://localhost:8090_, which can be queried via __Postman__ (Below)
+
+## System Testing
+
+To test the real, running API's:
 
 1. Install __Postman__: https://www.getpostman.com/downloads/
 2. Import the __Postman Collections__:

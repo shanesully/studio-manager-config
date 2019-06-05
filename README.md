@@ -1,5 +1,10 @@
 # Studio Manager
 
+Top-level Links
+
+Bookings API: https://github.com/shanesully/studio-manager-bookings-api
+Classes API: https://github.com/shanesully/studio-manager-classes-api
+
 A simple Spring Book microservices application for managing a fitness studio
 
 This guide is written for __macOS/Linux__. If you use __Windows__, I suggest you follow using __Git Bash__

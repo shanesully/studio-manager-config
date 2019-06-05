@@ -2,9 +2,13 @@
 
 ## Top-level Links
 
+Classes API: https://github.com/shanesully/studio-manager-classes-api
+
+Postman Collection: https://www.getpostman.com/collections/be3eb3356b31a3c2d885
+
 Bookings API: https://github.com/shanesully/studio-manager-bookings-api
 
-Classes API: https://github.com/shanesully/studio-manager-classes-api
+Postman Collection: https://www.getpostman.com/collections/aee5e9583ba50b95e289
 
 ## Description
 
